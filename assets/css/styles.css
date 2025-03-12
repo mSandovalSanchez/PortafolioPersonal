@@ -1,27 +1,46 @@
 /* Estilos generales */
-body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background-color: #f4f6f9;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1, h2, h3 {
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
   font-family: 'Lora', serif;
 }
 
 /* Barra de navegación */
+nav {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 .navbar {
-  padding: 1rem 0;
+  padding: 1rem 2rem;
 }
 
 .navbar-brand {
-  font-weight: bold;
-  color: #333;
+  font-weight: 600;
+  color: #007bff;
+  font-size: 1.8rem;
 }
 
 .navbar-nav .nav-link {
   font-size: 1.1rem;
+  font-weight: 500;
   color: #333;
+  transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
@@ -30,18 +49,43 @@ h1, h2, h3 {
 
 /* Sección de presentación */
 #home {
-  padding-top: 120px;
-  padding-bottom: 50px;
+  background: linear-gradient(135deg, #85b8ee 0%, #a5deee 100%);
+  color: white;
+  padding: 150px 20px 100px;
+  text-align: center;
 }
 
 #home h1 {
-  font-size: 2.8rem;
-  color: #333;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
 #home p {
   font-size: 1.2rem;
-  color: #666;
+  color: #ffffff;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+#home img {
+  border-radius: 50%;
+  border: 5px solid white;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+#home a {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#home a:hover {
+  color: #ffbb33;
 }
 
 /* Sección sobre mí */
@@ -49,26 +93,49 @@ h1, h2, h3 {
   background-color: #ffffff;
   padding: 60px 30px;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+  text-align: center;
 }
 
 #about h2 {
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 600;
   color: #333;
+  margin-bottom: 20px;
 }
 
 #about p {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: #555;
+  margin-bottom: 30px;
 }
 
 /* Sección de experiencia */
+#experience {
+  background-color: #f9f9f9;
+  padding: 60px 30px;
+  margin-bottom: 50px;
+}
+
+#experience h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
 .card {
   border: none;
   border-radius: 10px;
   background-color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
 }
 
 .card-body {
@@ -76,14 +143,15 @@ h1, h2, h3 {
 }
 
 .card-title {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 600;
   color: #333;
 }
 
 .card-subtitle {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #777;
+  margin-bottom: 10px;
 }
 
 .card-text {
@@ -92,39 +160,99 @@ h1, h2, h3 {
 }
 
 /* Sección de proyectos */
-.card-img-top {
-  height: 200px;
+#projects {
+  background-color: #ffffff;
+  padding: 60px 30px;
+  margin-bottom: 50px;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#projects .card {
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+#projects .card-img-top {
+  height: 250px;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+#projects .card-img-top:hover {
+  transform: scale(1.1);
+}
+
+.card-body {
+  padding: 20px;
 }
 
 .card-body .btn-outline-primary {
   color: #007bff;
   border-color: #007bff;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
 .card-body .btn-outline-primary:hover {
   background-color: #007bff;
-  color: #fff;
+  color: white;
 }
 
 /* Sección de contacto */
+#contact {
+  background-color: #f9f9f9;
+  padding: 60px 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #007bff;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
 form {
   max-width: 600px;
   margin: 0 auto;
 }
 
-form .form-group {
-  margin-bottom: 1.5rem;
+form .form-group label {
+  font-weight: 600;
+}
+
+form .form-control {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+form .form-control:focus {
+  border-color: #007bff;
+  box-shadow: none;
 }
 
 form button {
-  width: 100%;
   background-color: #007bff;
-  color: #fff;
+  color: white;
+  font-weight: 600;
+  padding: 15px 20px;
+  border-radius: 5px;
   border: none;
-  padding: 15px;
-  font-size: 1.1rem;
+  width: 100%;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 form button:hover {
@@ -134,15 +262,76 @@ form button:hover {
 /* Pie de página */
 footer {
   background-color: #343a40;
-  color: #fff;
-  padding: 20px 0;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
 }
 
 footer a {
   color: #ffffff;
   text-decoration: none;
+  margin: 0 10px;
 }
 
 footer a:hover {
-  text-decoration: underline;
+  color: #ffbb33;
+}
+
+/* Animaciones */
+@keyframes slideUp {
+  0% {
+      transform: translateY(30px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+#about, #experience, #projects, #contact {
+  animation: slideUp 0.8s ease-in-out;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  #home h1 {
+      font-size: 2rem;
+  }
+  #home p {
+      font-size: 1rem;
+  }
+  #home img {
+      width: 120px;
+      height: 120px;
+  }
+
+  #about h2, #experience h2, #projects h2, #contact h2 {
+      font-size: 2rem;
+  }
+
+  #about p, #experience p, #projects p {
+      font-size: 1rem;
+  }
+
+  .card-body .btn-outline-primary {
+      font-size: 0.9rem;
+  }
+
+  #projects .row .col-md-4 {
+      margin-bottom: 20px;
+  }
+
+  form .form-group label {
+      font-size: 1rem;
+  }
+
+  form button {
+      padding: 12px;
+  }
 }
